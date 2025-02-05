@@ -1,0 +1,216 @@
+
+  .site-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  
+
+.site-header {
+    height: 60px;
+    background-image: linear-gradient(to bottom, white,white);
+}
+
+.site-footer {
+    height: 30px;
+    background-image: linear-gradient(to right, 
+    var(--button-color), #F3E5AB );
+     flex-shrink: 0;
+}
+
+.site-footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;  
+    width: 100%;  
+}
+
+.site-content {
+    flex-grow: 1;
+}
+
+.nav-style {
+    display: flex;    
+    align-items: center;
+    justify-content: left;
+    height: 100%;  
+    width: 100%;  
+}
+
+a {
+    cursor: pointer;
+    user-select: none;
+}
+
+.nav-logo {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.logo-img {
+    height: 50px;
+    width: 50px;
+}
+
+.nav-text {
+    color: var(--button-text-color);
+    font-family: Inter;
+    font-weight: 800;
+    font-size: 16px;
+    top: 20px;
+    margin-left: 10px;
+}
+
+.navbar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 20px;
+  }
+  
+  .navbar-items-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 0px;
+  }
+  
+  .tile-link {
+    text-decoration: none;
+    color: var(--button-text-color);
+    background-color: var(--button-color);
+    font-size: 16px;
+    font-weight: bold;
+    
+    padding: 7px 10px 7px 10px;
+    margin-left: 10px;
+
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d; 
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border: var(--button-color) solid 1px;
+    border-radius: 20px;    
+
+    border: var(--button-border-color) solid 2px;
+  }
+  
+  .tile-link:hover {
+    box-shadow: 0px 20px 40px  rgba(0, 0, 0, 0.3);
+    /* transform: translateZ(50px) rotateX(10deg) rotateY(0deg) scale(1.1); */
+
+    background-color: var(--button-hover-color);
+    border: grey solid 2px;
+    color: var(--button-text-color);
+    border-radius: 20px;
+  }
+
+  .profile-tile-link{
+    text-decoration: none;
+    color: var(--button-text-color);
+    background-color: var(--button-color);
+    font-size: 16px;
+    font-weight: bold;
+    
+    padding: 0px 10px 0px 10px;
+    
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d; /* Ensures child elements are in 3D space */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border: var(--button-color) solid 1px;
+    border-radius: 20px;    
+
+    border: var(--button-border-color) solid 2px;
+  }
+
+  .profile-tile-link:hover {
+    box-shadow: 0px 20px 40px  rgba(0, 0, 0, 0.3);
+    /* transform: translateZ(50px) rotateX(10deg) rotateY(0deg) scale(1.1); */
+
+    background-color: var(--button-hover-color);
+    border: grey solid 2px;
+    color: var(--button-text-color);
+    border-radius: 20px;
+  }
+
+  .tile-link-create{
+    padding: 5px 10px 7px 10px;
+    height: 36px;
+    margin-left: 15px;
+    font-weight: 500;
+  }
+
+  .navbar-user-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 50px;
+  }
+
+  .navbar-user-avatar {
+    margin-left: 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+  }
+
+  .login-form-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .login-form-submit{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    padding-left: 170px;
+  }
+
+  .search-bar {
+    max-width: 500px;    
+}
+
+.search-bar .input-group {
+    border-radius: 30px;
+    overflow: hidden;    
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar .form-control {
+    border: none;
+    padding-left: 20px;
+}
+
+.search-bar .btn {
+    border: none;
+    padding: 10px 20px;
+}
+
+.team-members-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px 20px 10px 20px;
+    
+}
+
+.member-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    margin: 10px 10px 10px 10px;
+    padding: 10px 20px 10px 20px;
+
+    border: red solid 1px;
+}

@@ -1,0 +1,51 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  
+  margin: 0px 0px;
+  font-family: Inter, sans-serif;
+  background: #F9F6EE;  
+  color: black;
+  height: 100%;
+  perspective: 1000px;
+}
+
+:root {
+  --primary-color: #3498db;      
+  --secondary-color: #e74c3c;
+  --background-color: #f4f4f4;
+
+  --button-color: #FFDEAD;
+  --button-border-color: black;
+  --button-hover-color: #FFE5B4BB;
+
+  --filter-text-color: black; 
+  --filter-hover-color: #FFE5B4CC;
+
+  --button-text-color: black;
+
+  --cardBG-color: white;
+  --infoBG-color: lightgrey;
+  --border-color: #8e0303;
+}
+
+.modal {
+    animation: fadeIn 0.3s ease-in-out; 
+    position: fixed;   
+    
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

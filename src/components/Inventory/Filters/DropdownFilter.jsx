@@ -80,7 +80,7 @@ export default function DropdownFilter(props) {
         
 
         <section className="filter-section"> 
-            <span>{props.name}</span> 
+            <span className="filter-label">{props.name}</span> 
             <div className="show-hide-filter">                
                 <div className="arrow-container" >                
                     <img src={gtSign} alt=">" className="arrow" onClick={toogleShow}/> 

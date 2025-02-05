@@ -33,7 +33,7 @@ export default function RangeFilter(props) {
 
     return (
         <section className="filter-section"> 
-            <span>{props.name}</span> 
+            <span className="filter-label">{props.name}</span> 
             
             <div className="show-hide-filter">                
                 <div className="arrow-container" >                

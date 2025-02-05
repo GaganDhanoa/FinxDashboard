@@ -9,7 +9,7 @@
 
 .site-header {
     height: 60px;
-    background-image: linear-gradient(to bottom, white,white);
+    background-image: linear-gradient(to bottom,white, var(--cardBG-color));
 }
 
 .site-footer {
@@ -103,7 +103,7 @@ a {
     /* transform: translateZ(50px) rotateX(10deg) rotateY(0deg) scale(1.1); */
 
     background-color: var(--button-hover-color);
-    border: grey solid 2px;
+    border: white solid 2px;
     color: var(--button-text-color);
     border-radius: 20px;
   }
@@ -131,7 +131,7 @@ a {
     /* transform: translateZ(50px) rotateX(10deg) rotateY(0deg) scale(1.1); */
 
     background-color: var(--button-hover-color);
-    border: grey solid 2px;
+    border: white solid 2px;
     color: var(--button-text-color);
     border-radius: 20px;
   }

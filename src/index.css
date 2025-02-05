@@ -8,18 +8,47 @@ body {
   
   margin: 0px 0px;
   font-family: Inter, sans-serif;
-  background: #F9F6EE;  
+  background-color: #EAE7DC;  
+  background: black;
   color: black;
   height: 100%;
   perspective: 1000px;
 }
+
+
 
 :root {
   --primary-color: #3498db;      
   --secondary-color: #e74c3c;
   --background-color: #f4f4f4;
 
-  --button-color: #FFDEAD;
+  /* --button-color: #7091E6; */
+  --button-color: #316FF6EE;
+
+  /* --button-border-color: #3D52A0; */
+  --button-border-color: black;
+
+  /* --button-hover-color: #7091E6AA; */
+  --button-hover-color: #316FF6CC;
+
+
+  --filter-text-color: black; 
+
+  --filter-hover-color: #316FF6AA;
+
+  --button-text-color: black;
+
+  --cardBG-color: #EDE8F5;
+
+  /* --infoBG-color: #ADBBDA; */
+  --infoBG-color: #D4CDE6;
+
+  /* --border-color: #3D52A0; */
+  --border-color: white;
+}
+
+/* 
+--button-color: #FFDEAD;
   --button-border-color: black;
   --button-hover-color: #FFE5B4BB;
 
@@ -28,10 +57,9 @@ body {
 
   --button-text-color: black;
 
-  --cardBG-color: white;
+  --cardBG-color: #F9F6EE;
   --infoBG-color: lightgrey;
-  --border-color: #8e0303;
-}
+  --border-color: #8e0303; */
 
 .modal {
     animation: fadeIn 0.3s ease-in-out; 

@@ -256,7 +256,7 @@ export default function VehicleCard(props) {
                 <div className="vehicle-info">
                     <div className="info-div">
                         {!props.editMode ?
-                        <span className="display-span">{props.vehicle.mileage} Km </span>
+                        <span className="display-span">{props.vehicle.mileage.toLocaleString()} Km </span>
                         :
                         <>                          
                         <input type="number" name="mileage" defaultValue={props.vehicle.mileage} className="edit-input ei2" /> 
@@ -279,7 +279,7 @@ export default function VehicleCard(props) {
                 <div className="vehicle-info vehicle-info2 ">
                     <div className="info-div">
                         {!props.editMode ?
-                        <span className="display-span">Price: ${props.vehicle.price}</span>
+                        <span className="display-span">Price: ${props.vehicle.price.toLocaleString()}</span>
                         :
                         <>  
                             <span className="input-span">Price: </span>                                                      

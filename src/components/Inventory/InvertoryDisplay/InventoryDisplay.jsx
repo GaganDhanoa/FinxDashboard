@@ -130,6 +130,10 @@ export default function InventoryDisplay(props) {
                 }
             </div>
 
+            <div className="number-of-vehicles">
+                <span className="number-of-vehicles-span">{searchFilteredVehiclesIndexs.length} vehicles found </span>
+            </div>
+
             <div className="inventory-display-vehicles" id="inventory-display-vehicles">
                 {displayCards}
                 

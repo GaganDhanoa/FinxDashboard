@@ -23,6 +23,7 @@ export default function SearchBar(props) {
         let hasYear = false;
         let hasName = false;
         let year = 0;
+        let searchString = "";
         for(let i=0; i<tempsearchTerms.length; i++) {
             if(tempsearchTerms[i] !== "") {
                 
@@ -34,6 +35,7 @@ export default function SearchBar(props) {
                 //check if the search term is a string
                 else {
                     hasName = true;
+                    searchString += tempsearchTerms[i];
                     searchTerms.push(tempsearchTerms[i]);
                 }
             }            
@@ -43,27 +45,24 @@ export default function SearchBar(props) {
 
         for(let i=0; i<props.filteredVehiclesIndexs.length; i++) {
             
+            const makeModel = props.allVehicles[props.filteredVehiclesIndexs[i]]["make"] +  props.allVehicles[props.filteredVehiclesIndexs[i]]["model"];   
+            const modelMake = props.allVehicles[props.filteredVehiclesIndexs[i]]["model"] +  props.allVehicles[props.filteredVehiclesIndexs[i]]["make"];
+
             if(hasYear){
                 if(props.allVehicles[props.filteredVehiclesIndexs[i]]["year"].toString().toLowerCase().includes(year ) ){
                     if(searchTerms.length === 0) {
                         newFilteredVehiclesIndexs.add(props.filteredVehiclesIndexs[i]);
                     }
-                    else{
-                        for(let j=0; j<searchTerms.length; j++) {
-                            if(props.allVehicles[props.filteredVehiclesIndexs[i]]["make"].toLowerCase().includes(searchTerms[j]) ||
-                            props.allVehicles[props.filteredVehiclesIndexs[i]]["model"].toLowerCase().includes(searchTerms[j]) ){
+                    else{                        
+                            if(makeModel.toLowerCase().includes(searchString) || modelMake.toLowerCase().includes(searchString) ){
                                 newFilteredVehiclesIndexs.add(props.filteredVehiclesIndexs[i]);
-                            }
-                        }
+                            }                        
                     }
                 }
-            }else{
-                for(let j=0; j<searchTerms.length; j++) {
-                    if(props.allVehicles[props.filteredVehiclesIndexs[i]]["make"].toLowerCase().includes(searchTerms[j]) ||
-                    props.allVehicles[props.filteredVehiclesIndexs[i]]["model"].toLowerCase().includes(searchTerms[j]) ){
-                        newFilteredVehiclesIndexs.add(props.filteredVehiclesIndexs[i]);
-                    }
-                }
+            }else{                
+                if(makeModel.toLowerCase().includes(searchString) || modelMake.toLowerCase().includes(searchString) ){
+                    newFilteredVehiclesIndexs.add(props.filteredVehiclesIndexs[i]);
+                }                
             }
         }         
 
@@ -77,7 +76,7 @@ export default function SearchBar(props) {
     return (
         <div className="search-bar">
             <div className="input-group">
-                <input onChange={handleChange} value={searchTerm} type="text" className="form-control" placeholder="Search..." aria-label="Search" aria-describedby="search-addon"/>            
+                <input onChange={handleChange} value={searchTerm} type="text" className="search-bar-input form-control" placeholder="Search..." aria-label="Search" aria-describedby="search-addon"/>            
             </div>
         </div>
     )
